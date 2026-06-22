@@ -14,28 +14,37 @@ a maior e melhor API de LinkedIn do mercado.
 
 ---
 
-## 🤖 Jeito mais fácil: deixe o Claude te instalar
+## 🤖 Instalação em 1 prompt (recomendado)
 
-Abra o Claude e cole isto:
+Não precisa mexer em terminal nem editar arquivo. Abra o **Claude** (Claude Code ou
+Claude Desktop) e cole exatamente isto:
 
-> "Quero conectar meu LinkedIn ao Claude usando este repositório:
-> https://github.com/vzbaggio/unipile-linkedin-mcp
-> Leia o README e me guie passo a passo: criar minha conta na Unipile, conectar meu
-> LinkedIn, pegar as 3 credenciais e configurar o Claude Desktop. Vá uma etapa por vez."
+```
+Claude, quero que instale este repositório do GitHub e execute o processo de
+instalação do MCP que ele propõe. Leia o INSTALL.md e siga as instruções.
+Caso precise da minha ação, me avise e me guie passo a passo — e depois me ensine
+a usar a ferramenta.
+Repo: https://github.com/vzbaggio/unipile-linkedin-mcp
+```
 
-O Claude segue as instruções abaixo com você. Se preferir fazer na mão, é só seguir
-os passos a seguir.
+O Claude faz o resto: instala o que precisa, configura o MCP e só te pede ação para
+criar a conta na Unipile e copiar as 3 credenciais (ele te guia nisso). As instruções
+que o Claude segue estão em [`INSTALL.md`](INSTALL.md).
+
+> Prefere fazer na mão? O passo a passo manual está logo abaixo.
 
 ---
 
-## Passo 1 — Crie sua conta na Unipile e conecte o LinkedIn
+## Instalação manual (alternativa)
+
+### Passo 1 — Crie sua conta na Unipile e conecte o LinkedIn
 
 1. Crie sua conta aqui 👉 **[unipile.com](https://www.unipile.com/?utm_source=linkedin&utm_campaign=passionfroot_victor-baggio)**
    (tem teste grátis para começar).
 2. No painel, vá em **Accounts → Add account → LinkedIn** e faça login na sua conta
    do LinkedIn. A própria Unipile cuida da conexão de forma segura.
 
-## Passo 2 — Pegue suas 3 credenciais
+### Passo 2 — Pegue suas 3 credenciais
 
 No painel da Unipile você precisa de 3 valores:
 
@@ -49,7 +58,7 @@ No painel da Unipile você precisa de 3 valores:
 > de LinkedIn (enviar convite, mandar mensagem, postar). Nunca a compartilhe nem a
 > publique em repositório público.
 
-## Passo 3 — Instale o `uv`
+### Passo 3 — Instale o `uv`
 
 O `uv` é o que roda o servidor (ele instala o resto sozinho).
 
@@ -66,7 +75,7 @@ brew install uv
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-## Passo 4 — Configure o Claude Desktop
+### Passo 4 — Configure o Claude Desktop
 
 Abra o arquivo de configuração do Claude Desktop:
 
@@ -99,7 +108,7 @@ Esta versão roda o servidor **direto do GitHub**, sem precisar baixar nada:
 > (descubra com `which uv` no Mac/Linux ou `where uv` no Windows). Ex. no Mac com
 > Homebrew: `/opt/homebrew/bin/uv`.
 
-## Passo 5 — Reinicie o Claude Desktop e teste
+### Passo 5 — Reinicie o Claude Desktop e teste
 
 Feche e abra o Claude Desktop. Depois peça, por exemplo:
 
